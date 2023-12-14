@@ -3,6 +3,7 @@
 
 try:
     
+    
     from pathlib import Path
 except ImportError:
     print("A biblioteca 'pathlib' não está instalada. Instalando agora...")
