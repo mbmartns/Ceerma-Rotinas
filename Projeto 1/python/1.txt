@@ -1,0 +1,27 @@
+planetas = input().split(', ')
+planetas.sort()
+
+def gera_subconjuntos_backtracking(planetas):
+    def backtrack(start, k, subset):
+        if k == 0:
+            visitacao.append(subset[:])
+            return
+
+        for i in range(start, len(planetas)):
+            subset.append(planetas[i])
+            backtrack(i + 1, k - 1, subset)
+            subset.pop()
+
+    visitacao = []
+    for k in range(len(planetas) + 1):
+        backtrack(0, k, [])
+    
+    return visitacao
+
+if len(planetas) == 1 and not planetas[0].strip():
+    planetas.clear()
+subconjuntos = gera_subconjuntos_backtracking(planetas)
+subconjuntos.sort()
+n_subsets = len(subconjuntos)
+print(f'O número de subsets de visitação é {n_subsets}')
+print(f'São eles: {subconjuntos}')

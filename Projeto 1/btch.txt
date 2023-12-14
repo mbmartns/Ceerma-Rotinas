@@ -1,0 +1,14 @@
+@
+datcnv  /iC:\Users\Bia\Desktop\CTD_Dados_Brutos\LACN_%1.hex /pC:\Users\Bia\AppData\Local\Sea-Bird\SBEDataProcessing-Win32\DatCnv.psa /fLACN_%1.cnv /oC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados /cC:\Users\Bia\Desktop\CTD_Dados_Brutos\LACN_%1.XMLCON /w
+@
+filter  /iC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados\LACN_%1.cnv /pC:\Users\Bia\AppData\Local\Sea-Bird\SBEDataProcessing-Win32\Filter.psa /fLACN_%1.cnv /oC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados /w
+@
+alignctd  /iC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados\LACN_%1.cnv /pC:\Users\Bia\AppData\Local\Sea-Bird\SBEDataProcessing-Win32\AlignCTD.psa /fLACN_%1.cnv /oC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados
+@
+celltm /iC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados\LACN_%1.cnv /pC:\Users\Bia\AppData\Local\Sea-Bird\SBEDataProcessing-Win32\CellTM.psa /fLACN_%1.cnv /oC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados
+@
+loopedit /iC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados\LACN_%1.cnv /pC:\Users\Bia\AppData\Local\Sea-Bird\SBEDataProcessing-Win32\LoopEdit.psa /fLACN_%1.cnv /oC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados
+@
+derive /iC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados\LACN_%1.cnv /pC:\Users\Bia\AppData\Local\Sea-Bird\SBEDataProcessing-Win32\Derive.psa /fLACN_%1.cnv /oC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados /cC:\Users\Bia\Desktop\CTD_Dados_Brutos\LACN_%1.XMLCON
+@
+binavg  /iC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados\LACN_%1.cnv /pC:\Users\Bia\AppData\Local\Sea-Bird\SBEDataProcessing-Win32\BinAvg.psa /fLACN_%1.cnv /oC:\Users\Bia\Desktop\CTD_Dados_Brutos\Dados 

@@ -1,0 +1,16 @@
+def max_colares_salas(salas):
+    n = len(salas)
+    if n == 1:
+      return int(salas[0])
+        
+    memo = [0] * n
+    memo[0] = int(salas[0])
+    memo[1] = max(int(salas[0]), int(salas[1]))
+    for i in range(2, n):
+        memo[i] = max(memo[i - 1], memo[i - 2] + int(salas[i]))
+    return memo[-1]
+
+n_salas = input()
+quantidade_colares = input().split(' ')
+resultado = max_colares_salas(quantidade_colares)
+print(f"{resultado} colares podem ser retirados.")
