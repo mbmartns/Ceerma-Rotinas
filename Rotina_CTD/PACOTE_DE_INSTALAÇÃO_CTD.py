@@ -2,6 +2,7 @@
 # Além desses pacotes do python instalados, é necessário possuir o Software da SeaBird (SBEDataProcessing-Win32) para realizar o Processamento.
 
 try:
+    
     from pathlib import Path
 except ImportError:
     print("A biblioteca 'pathlib' não está instalada. Instalando agora...")
